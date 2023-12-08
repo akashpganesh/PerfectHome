@@ -151,12 +151,22 @@ $row1=$conn->query($selQry1);
     </tr>
   </table>
   <p>
-    <?php
+   
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <?php
+    if($data["lease_status"]==1){
+    ?>
+   <input type="submit" name="btn_request" id="btn_request" value="Send Request" class="button"/>
+      <?php
+    }else{
+      ?>
+      <input type="button" name="btn" id="btn" value="Aldredy in Use" class="button"/>
+   <?php
+    }
   }
   ?>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-   <input type="submit" name="btn_request" id="btn_request" value="Send Request" class="button"/>
+  
 </form>
 </center>
 </body>

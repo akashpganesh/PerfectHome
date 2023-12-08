@@ -158,13 +158,25 @@ $row1=$conn->query($selQry1);
   </table>
   
   <p>
-    <?php
-  }
-  ?>
+ 
   <br />
   <p>
+    <?php
+      if($data["house_status"]==1){
+        ?>
           <input type="submit" name="btn_request" id="btn_request" value="Send Request" class="button"/>
+          <?php
+      }else{
+        ?>
+        <input type="button" name="btn" id="btn" value="Aldredy in Use" class="button" disabled/>
+        <?php
+      }
+      ?>
+
         </p>
+        <?php
+  }
+  ?>
 </form>
 </center>
 </body>

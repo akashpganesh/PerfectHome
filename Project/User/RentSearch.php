@@ -234,27 +234,27 @@ Type :
      $type=$_POST["txt_type"];
 if(!empty($district) && empty($place) && !empty($type))
 {
-	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND p.dist_id='".$district."' AND h.type_id='".$type."' and house_status=1";
+	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND p.dist_id='".$district."' AND h.type_id='".$type."'";
 	
 }else if(!empty($district) && !empty($place) && empty($type))
 {
-	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND h.place_id='".$place."' AND house_status=1";
+	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND h.place_id='".$place."'";
 }else if(!empty($district) && empty($place) && empty($type))
 {
-	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND p.dist_id='".$district."' AND house_status=1";
+	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND p.dist_id='".$district."'";
 }else if(empty($district) && empty($place) && !empty($type))
 {
-	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND h.type_id='".$type."' and house_status=1";
+	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND h.type_id='".$type."'";
 }else if(empty($district) && empty($place) && empty($type))
 {
-	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id and house_status=1";
+	$selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id";
 }else
 {
-  $selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND h.place_id='".$place."' AND h.type_id='".$type."' and house_status=1";
+  $selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id AND h.place_id='".$place."' AND h.type_id='".$type."'";
   }
 }else{
 	  
-	   $selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id and house_status=1";
+	   $selQry = "select * from tbl_house h inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where h.place_id=p.place_id AND p.dist_id=d.dist_id AND h.type_id=t.type_id AND h.owner_id=o.owner_id";
   }
 $row=$conn->query($selQry);
   $i=0;

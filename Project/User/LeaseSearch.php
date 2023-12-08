@@ -198,9 +198,9 @@ Type :
      $type=$_POST["txt_type"];
 
 
-  $selQry = "select * from tbl_lease l inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where l.place_id=p.place_id AND p.dist_id=d.dist_id AND l.type_id=t.type_id AND l.owner_id=o.owner_id AND l.place_id='".$place."' AND l.type_id='".$type."' and lease_status=1";
+  $selQry = "select * from tbl_lease l inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where l.place_id=p.place_id AND p.dist_id=d.dist_id AND l.type_id=t.type_id AND l.owner_id=o.owner_id AND l.place_id='".$place."' AND l.type_id='".$type."'";
   }else{
-		$selQry = "select * from tbl_lease l inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where l.place_id=p.place_id AND p.dist_id=d.dist_id AND l.type_id=t.type_id AND l.owner_id=o.owner_id and lease_status=1";
+		$selQry = "select * from tbl_lease l inner join tbl_housetype t,tbl_owner o,tbl_place p inner join tbl_district d where l.place_id=p.place_id AND p.dist_id=d.dist_id AND l.type_id=t.type_id AND l.owner_id=o.owner_id";
   }
 $row=$conn->query($selQry);
   $i=0;

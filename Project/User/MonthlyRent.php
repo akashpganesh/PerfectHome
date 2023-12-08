@@ -121,6 +121,10 @@ $selqry="select*from tbl_renter r inner join tbl_house h where r.house_id=h.hous
 	  $_SESSION["amount"]=$amount; ?></td>
     </tr>
     <tr>
+      <td>Rent Per Month</td>
+      <td><?php echo $data["house_price"]; ?></td>
+    </tr>
+    <tr>
       <td>Comment</td>
       <td><label for="txt_comment"></label>
       <textarea name="txt_comment" id="txt_comment" cols="45" rows="5"></textarea></td>
